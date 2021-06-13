@@ -1,82 +1,37 @@
 import 'package:flutter/material.dart';
 
 class LayoutWidget extends StatelessWidget {
+  const LayoutWidget({ Key key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Layout"),
+        title: Text("Welcome to Flutter"),
       ),
-      // body: Column(
-      //   children: [
-      //     Expanded(
-      //       flex: 2,
-      //       child: Container(
-      //         child: Text("Hey Now"),
-      //         color: Colors.pink,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       flex: 1,
-      //       child: Container(
-      //       child: Text("Hey Now"),
-      //       color: Colors.yellow,
-      //     ),
-      //     ),
-      //     Expanded(
-      //       flex: 2,
-      //       child: Container(
-      //         child: Text("Hey Now"),
-      //         color: Colors.blue,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       flex: 1,
-      //       child: Container(
-      //         child: Text("Hey Now",style: TextStyle(
-      //           color: Colors.white
-      //         ),),
-      //         color: Colors.black,
-      //     ),
-      //     )
-      //   ],
-      // ),
-      body: ListView(
+      body: Column(
+        //mainAxisAlignment: MainAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Card(
-            elevation: 5,
-              color: Colors.yellow,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 200,
-                  horizontal: 100
-                ),
-                child: Text("Hey Now"),
-              )
-          ),
-          Card(
+          Expanded(
+            child: Container(
+                color: Colors.blue,
+                child: Center(child: Text("First child")),
+                      ),
+            ),
+          Expanded(
+            child: Container(
               color: Colors.green,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 200,
-                  horizontal: 100
-                ),
-                child: Text("Hey Now",textAlign: TextAlign.center,),
-              )
+              child: Center(child: Text("Second child"))),
           ),
-          Card(
+          Expanded(
+            child: Container(
               color: Colors.red,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 200,
-                  horizontal: 100
-                ),
-                child: Text("Hey Now",textAlign: TextAlign.center,),
-              )
-          ),
+              child: Center(child: Text("Third child"))),
+          )
         ],
-      )
+      ),
+      
     );
   }
 }
