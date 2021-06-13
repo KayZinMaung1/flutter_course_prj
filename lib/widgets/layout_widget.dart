@@ -9,48 +9,74 @@ class LayoutWidget extends StatelessWidget {
         title: Text("Layout"),
       ),
       // body: Column(
-      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       //   children: [
-      //     Container(
-      //       height: 200,
-      //       color: Colors.pink,
+      //     Expanded(
+      //       flex: 2,
+      //       child: Container(
+      //         child: Text("Hey Now"),
+      //         color: Colors.pink,
+      //       ),
       //     ),
-      //     Container(
-      //       height: 200,
+      //     Expanded(
+      //       flex: 1,
+      //       child: Container(
+      //       child: Text("Hey Now"),
       //       color: Colors.yellow,
       //     ),
-      //     Container(
-      //       height: 200,
-      //       color: Colors.blue,
       //     ),
+      //     Expanded(
+      //       flex: 2,
+      //       child: Container(
+      //         child: Text("Hey Now"),
+      //         color: Colors.blue,
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 1,
+      //       child: Container(
+      //         child: Text("Hey Now",style: TextStyle(
+      //           color: Colors.white
+      //         ),),
+      //         color: Colors.black,
+      //     ),
+      //     )
       //   ],
       // ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: ListView(
         children: [
-          Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.purple,
-              shape: BoxShape.circle,
-            ),
+          Card(
+            elevation: 5,
+              color: Colors.yellow,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 200,
+                  horizontal: 100
+                ),
+                child: Text("Hey Now"),
+              )
           ),
-          Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
+          Card(
+              color: Colors.green,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 200,
+                  horizontal: 100
+                ),
+                child: Text("Hey Now",textAlign: TextAlign.center,),
+              )
+          ),
+          Card(
               color: Colors.red,
-              borderRadius: BorderRadius.circular(10)
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.teal,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 200,
+                  horizontal: 100
+                ),
+                child: Text("Hey Now",textAlign: TextAlign.center,),
+              )
           ),
         ],
-      ),
+      )
     );
   }
 }
